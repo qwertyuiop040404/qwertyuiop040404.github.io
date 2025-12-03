@@ -570,3 +570,144 @@ ol.custom-list ul li::before {
     margin-top: 2px;
     text-align: left;
 }
+
+/* ===================ZAIDIMAS=================== */
+
+.game.section {
+    padding: 60px 0;
+}
+
+.game-controls {
+    gap: 0.75rem;
+}
+
+.game-controls .difficulty span {
+    font-weight: 500;
+}
+
+.game-buttons button {
+    min-width: 110px;
+}
+
+.game-stats {
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 12px;
+    padding: 18px 20px;
+    border: 1px solid rgba(57, 255, 20, 0.4);
+    box-shadow: 0 0 16px rgba(57, 255, 20, 0.3);
+}
+
+.game-stats h3 {
+    margin-bottom: 12px;
+}
+
+.game-stats p {
+    margin-bottom: 6px;
+}
+
+.game-board {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.game-board.easy {
+    grid-template-columns: repeat(4, minmax(70px, 1fr));
+}
+.game-board.hard {
+    grid-template-columns: repeat(6, minmax(60px, 1fr));
+}
+
+.memory-card {
+    position: relative;
+    width: 100%;
+    padding-top: 120%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    perspective: 900px;
+}
+
+.memory-card:disabled {
+    cursor: default;
+}
+
+.memory-card-inner {
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #1b2836, #111827);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+    transform-style: preserve-3d;
+    transition: transform 0.45s ease;
+}
+
+.memory-card.flipped .memory-card-inner,
+.memory-card.matched .memory-card-inner {
+    transform: rotateY(180deg);
+}
+
+.memory-card-face {
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+
+.memory-card-front {
+    background: radial-gradient(circle at top, #39ff14 0%, #111827 55%);
+    border: 1px solid rgba(57, 255, 20, 0.6);
+}
+
+.card-question {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.9);
+}
+
+.memory-card-back {
+    transform: rotateY(180deg);
+    background: radial-gradient(circle at top, #00b3ff 0%, #050816 55%);
+    border: 1px solid rgba(0, 179, 255, 0.7);
+}
+
+.memory-card-back i {
+    font-size: 2rem;
+    margin-bottom: 6px;
+}
+
+.memory-card-back span {
+    font-size: 0.8rem;
+    opacity: 0.85;
+}
+
+.memory-card.matched .memory-card-inner {
+    box-shadow: 0 0 16px rgba(57, 255, 20, 0.9);
+}
+
+.game-message {
+    min-height: 22px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.game-message.visible {
+    color: #39ff14;
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.9);
+}
+
+.game-stats hr {
+    border-color: rgba(255, 255, 255, 0.15);
+    margin: 10px 0;
+}
+
+#game-time {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}

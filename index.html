@@ -609,6 +609,86 @@
 
 </section>
 
+<section id="game" class="game section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Mano Žaidimas</span>
+        <h2>Mano Žaidimas</h2>
+        <p>Atminties kortelių žaidimas – surask visas kortelių poras!</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+
+            <div class="game-controls d-flex flex-wrap align-items-center justify-content-between mb-3">
+              <div class="difficulty">
+                <span class="me-2">Sudėtingumas:</span>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="difficulty" id="difficulty-easy" value="easy" checked>
+                  <label class="form-check-label" for="difficulty-easy">Lengvas (4×3)</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="difficulty" id="difficulty-hard" value="hard">
+                  <label class="form-check-label" for="difficulty-hard">Sunkus (6×4)</label>
+                </div>
+              </div>
+
+              <div class="game-buttons">
+                <button type="button" id="game-start">Start</button>
+                <button type="button" id="game-reset" class="ms-2">Atnaujinti</button>
+              </div>
+            </div>
+
+            <div id="game-board" class="game-board">
+            </div>
+
+            <div id="game-message" class="game-message mt-3"></div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="game-stats">
+              <h3>Statistika</h3>
+              <p>Ėjimų (bandymų) skaičius: <span id="game-moves">0</span></p>
+              <p>Sutapusių porų skaičius:
+                <span id="game-matches">0</span> /
+                <span id="game-total-pairs">0</span>
+              </p>
+              <div class="game-stats">
+                <h3>Statistika</h3>
+
+                <p>Laikas: <span id="game-time">00:00</span></p>
+
+                <p>Ėjimų (bandymų) skaičius:
+                  <span id="game-moves">0</span>
+                </p>
+
+                <p>Sutapusių porų skaičius:
+                  <span id="game-matches">0</span> /
+                  <span id="game-total-pairs">0</span>
+                </p>
+
+                <hr>
+
+                <p>Geriausias rezultatas (lengvas):
+                  <span id="best-easy">–</span>
+                </p>
+
+                <p>Geriausias rezultatas (sunkus):
+                  <span id="best-hard">–</span>
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
 
   </main>
 
